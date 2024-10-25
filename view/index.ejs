@@ -6,51 +6,8 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <div><h1>Pokedex</h1></div>
-    <div id="forms">
-      <div class="form-treinador">
-        <h2>Treinador</h2>
-        <form action="">
-          <label>Nome do Treinador:</label>
-          <input
-            type="text"
-            name="nome"
-            placeholder="Digite o nome"
-            autocomplete="off"
-          />
-          <label>Nível do Treinador:</label>
-          <input
-            type="text"
-            name="nivel"
-            placeholder="Digite o nível"
-            autocomplete="off"
-          />
-          <button type="submit">Enviar Treinador</button>
-          <button>Ver Treinador</button>
-        </form>
-      </div>
-
-      <div class="form-pokemon">
-        <h2>Pokemon</h2>
-        <form action="">
-          <label>Nome do Pokemon:</label>
-          <input
-            type="text"
-            name="nome"
-            placeholder="Digite o nome"
-            autocomplete="off"
-          />
-          <label>Tipo Pokemon:</label>
-          <input
-            type="text"
-            name="tipo"
-            placeholder="Digite o tipo"
-            autocomplete="off"
-          />
-          <button type="submit">Enviar pokemon</button>
-          <button>Ver Pokemon</button>
-        </form>
-      </div>
-    </div>
+    <h1>Pokedex</h1>
+    <button onclick="location.href='/novoPokemon'">Cadastrar Pokemon</button>
+    <button>Cadastrar Treinador</button>
   </body>
 </html>

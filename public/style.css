@@ -13,6 +13,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: white; 
+    overflow-y: auto; 
 }
 
 
@@ -77,7 +78,7 @@ button {
     font-size: 1rem;
     color: #333;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     margin-top: 10px;
     transition: background-color 0.3s;
 }
@@ -90,15 +91,43 @@ button:active {
     background-color: #e6a000;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    #forms {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Estilização da lista de Pokémons */
+ul.pokemon-list {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0;
+    margin: 20px 0;
+}
 
-    .form-treinador, .form-pokemon {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+ul.pokemon-list li {
+    background-color: #f3f3f3; /* Cor de fundo dos itens */
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição ao passar o mouse */
+}
+
+ul.pokemon-list li a {
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+ul.pokemon-list li:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+ul.pokemon-list li a:hover {
+    color: #007bff; /* Cor do link ao passar o mouse */
+}
+
+.list-pokemon{
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    padding: 20px;
+    width: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
+    max-height: 300px; /* Define uma altura máxima */
+    overflow-y: auto; /* Permite rolagem interna na lista */
 }

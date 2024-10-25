@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pokémon</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Cadastrar Pokémon</h1>
+
+    <!-- Formulário para Cadastrar Novo Pokémon -->
+    <div class="form-pokemon">
+        <form action="/pokemons" method="POST">
+            <label>Nome do Pokémon:</label>
+            <input type="text" name="nome" placeholder="Digite o nome" required />
+
+            <label>Tipo do Pokémon:</label>
+            <input type="text" name="tipo" placeholder="Digite o tipo" required />
+
+            <button type="submit">Enviar Pokémon</button>
+            <button onclick="location.href='/'" class="back-button">Voltar para Página Inicial</button>
+        </form>
+    </div>
+
+    <div class="list-pokemon">
+        <h2>Lista de Pokémons</h2>
+        <ul class="pokemon-list">
+            <% pokemons.forEach(pokemon => { %>
+                <li>
+                    <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %> - <%= pokemon.tipo %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+
+</body>
+</html>
