@@ -4,9 +4,10 @@ const pokemonRoutes = require('./routes/pokemonRoutes');
 
 const app = express();
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', './view');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
+
 
 app.use('/', pokemonRoutes);
 

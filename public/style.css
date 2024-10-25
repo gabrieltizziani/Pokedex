@@ -1,0 +1,104 @@
+/* Estilizando o corpo com a imagem de fundo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/poke.jpg');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white; 
+}
+
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+
+#forms {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+
+.form-treinador, .form-pokemon {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3b4cca;
+}
+
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+    
+button {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f7b500;
+}
+
+button:active {
+    background-color: #e6a000;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    #forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-treinador, .form-pokemon {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
