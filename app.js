@@ -8,6 +8,8 @@ const pokemonRoutes = require("./routes/pokemonRoutes");
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(methodOverride("_method")); // Middleware para usar PUT/DELETE no formulário
 
 // Middleware para dados JSON e formulário
