@@ -2,11 +2,11 @@ const { Pokemon } = require("../models");
 
 exports.getAllPokemons = async (req, res) => {
   try {
-    const pokemons = await Pokemon.findAll();
-    res.render("pokemons", { pokemons });
+      const pokemons = await Pokemon.findAll();
+      res.render('createPokemon.ejs', { pokemons }); // Certifique-se de usar o template correto
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Erro ao buscar Pokémons" });
+      console.error(error);
+      res.status(500).json({ error: "Erro ao buscar Pokémons" });
   }
 };
 
