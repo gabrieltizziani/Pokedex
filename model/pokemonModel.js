@@ -14,3 +14,4 @@ const createPokemon = (nome, tipo) => {
 };
 
 module.exports = { getPokemons, getPokemonById, createPokemon };
+

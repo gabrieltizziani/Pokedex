@@ -7,10 +7,23 @@ const getAllTreinadores = (req, res) => {
 
 const getTreinador = (req, res) => {
     const treinador = treinadorModel.getTreinadorById(req.params.id);
-    if(treinador){
+    if (treinador) {
         res.render('treinador', { treinador });
-    } else{
+    } else {
         res.status(404).send('Treinador não encontrado');
     }
 };
-module.exports = {getAllTreinadores, getTreinador};
+
+const getCreateTreinadorForm = (req, res) => {
+    const treinadores = treinadorModel.getTreinadores();
+    res.render('createTreinador', { treinadores });
+};
+
+
+const createTreinador = (req, res) => {
+    const { nome, nivel } = req.body;
+    treinadorModel.createTreinador(nome, nivel);
+    res.redirect('/novoTreinador');
+};
+
+module.exports = { getAllTreinadores, getTreinador, getCreateTreinadorForm, createTreinador };

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Treinador</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Cadastrar Treinador</h1>
+
+    <div class="form-pokemon">
+        <form action="/treinadores" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required />
+    
+            <label for="nivel">Nível:</label>
+            <input type="text" name="nivel" id="nivel" required />
+    
+            <button type="submit">Cadastrar</button>
+            <button onclick="location.href='/'" class="back-button">Voltar para Página Inicial</button>
+        </form>
+    </div>
+
+
+    <!-- Lista de treinadores -->
+    <h2>Lista de Treinadores</h2>
+
+    <div class="list-pokemon">
+        <h2>Lista de Treinadores</h2>
+        <ul class="pokemon-list">
+            <% treinadores.forEach(treinador => { %>
+                <li>
+                    <a href="/treinador/<%= treinador.id %>"><%= treinador.nome %> - <%= treinador.nivel %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</body>
+
